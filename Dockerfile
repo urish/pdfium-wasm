@@ -59,3 +59,7 @@ RUN cp /usr/include/linux/limits.h linux/limits.h
 ### Build it!
 
 RUN bash -c 'source /opt/emsdk-portable/emsdk_env.sh && ninja -C out/Debug pdfium'
+
+## Cache system libraries
+RUN bash -c 'echo "int main() { return 0; }" > /tmp/main.cc'
+RUN bash -c 'source /opt/emsdk-portable/emsdk_env.sh && em++ -o /tmp/main.html /tmp/main.cc'
