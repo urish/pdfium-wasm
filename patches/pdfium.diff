@@ -1,0 +1,10 @@
+--- a/third_party/base/allocator/partition_allocator/spin_lock.cc
++++ b/third_party/base/allocator/partition_allocator/spin_lock.cc
+@@ -41,7 +41,7 @@
+ #endif
+ 
+ #ifndef YIELD_PROCESSOR
+-#warning "Processor yield not supported on this architecture."
++//#warning "Processor yield not supported on this architecture."
+ #define YIELD_PROCESSOR ((void)0)
+ #endif
