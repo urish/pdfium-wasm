@@ -14,6 +14,19 @@ index c7b02664c..a6863d2d4 100644
  #endif
  
  // Type detection for wchar_t.
+diff --git a/config/BUILDCONFIG.gn b/config/BUILDCONFIG.gn
+index 93a97ff28..01e6f96d0 100644
+--- a/config/BUILDCONFIG.gn
++++ b/config/BUILDCONFIG.gn
+@@ -524,7 +524,7 @@ default_compiler_configs = [
+   "//build/config/compiler:no_exceptions",
+   "//build/config/compiler:no_rtti",
+   "//build/config/compiler:runtime_library",
+-  "//build/config/compiler:thin_archive",
++#  "//build/config/compiler:thin_archive",
+   "//build/config/coverage:default_coverage",
+   "//build/config/sanitizers:default_sanitizer_flags",
+ ]
 diff --git a/config/compiler/BUILD.gn b/config/compiler/BUILD.gn
 index 40696d584..68fb948be 100644
 --- a/config/compiler/BUILD.gn
