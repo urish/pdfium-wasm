@@ -1,6 +1,17 @@
 # pdfium-wasm
 
-Building PDFium for Web Assembly
+PDFium compiled for Web Assembly
+
+## Usage
+
+Currently only usage inside Node.js is supported. Most of the public
+PDFium API is available. To install this to your project simply run:
+
+```shell
+npm install --save pdfium-wasm
+```
+
+Check out the [example project](https://github.com/urish/pdfium-wasm-example) for a simple usage example. 
 
 ## Building
 
