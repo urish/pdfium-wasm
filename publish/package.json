@@ -1,0 +1,29 @@
+{
+  "name": "pdfium-wasm",
+  "version": "0.0.2",
+  "description": "PDFium Web Assembly Build",
+  "main": "dist/pdfium.js",
+  "files": [
+    "dist/pdfium.js",
+    "dist/pdfium.wasm"
+  ],
+  "scripts": {
+    "prepublish": "docker create --name pdfium-temp-container urish/pdfium-wasm && docker cp pdfium-temp-container:/build/pdfium/out/dist . && docker rm pdfium-temp-container"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urish/pdfium-wasm.git"
+  },
+  "keywords": [
+    "web assembly",
+    "wasm",
+    "pdf",
+    "pdfium"
+  ],
+  "author": "Uri Shaked",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urish/pdfium-wasm/issues"
+  },
+  "homepage": "https://github.com/urish/pdfium-wasm#readme"
+}
