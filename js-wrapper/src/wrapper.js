@@ -1,4 +1,4 @@
-const pdfium = require('../dist/pdfium');
+const pdfium = require('/build/pdfium/out/dist/pdfium');
 const fs = require('fs');
 const path = require('path');
 

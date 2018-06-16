@@ -1,0 +1,25 @@
+/build/pdfium/out/Debug/obj/libpdfium.a
+-lfxcrt
+-lfxge
+-lfdrm
+-lformfiller
+-lfxcodec
+-lbigint
+-lfpdfapi
+-lfx_agg
+-lfx_freetype
+-lfx_lcms2
+-lfx_libopenjpeg
+-lfpdfdoc
+-lfxjs
+-ldl
+-lpthread
+-lrt
+/build/pdfium/out/Debug/obj/third_party/pdfium_base/address_space_randomization.o
+/build/pdfium/out/Debug/obj/third_party/pdfium_base/page_allocator.o
+/build/pdfium/out/Debug/obj/third_party/pdfium_base/partition_alloc.o
+/build/pdfium/out/Debug/obj/third_party/pdfium_base/spin_lock.o
+-I/build/pdfium/public
+-L/build/pdfium/out/Debug/obj
+-L/build/pdfium/out/Debug/obj/third_party
+-s DEMANGLE_SUPPORT=1

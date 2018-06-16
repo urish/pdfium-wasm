@@ -63,3 +63,15 @@ RUN bash -c 'source /opt/emsdk-portable/emsdk_env.sh && ninja -C out/Debug pdfiu
 ## Cache system libraries
 RUN bash -c 'echo "int main() { return 0; }" > /tmp/main.cc'
 RUN bash -c 'source /opt/emsdk-portable/emsdk_env.sh && em++ -o /tmp/main.html /tmp/main.cc'
+
+## Build pdfium-wasm.js
+
+RUN apt-get install -y doxygen
+WORKDIR /build/pdfium/public
+COPY config/Doxyfile Doxyfile
+RUN doxygen
+
+ADD utils utils
+RUN bash -ic 'cd utils && npm install'
+ENV OBJ_DIR=/build/pdfium/out/Debug/obj
+RUN bash -ic 'utils/build-pdfium-wasm.sh'
