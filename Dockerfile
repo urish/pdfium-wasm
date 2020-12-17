@@ -10,7 +10,7 @@ RUN apt-get install -y wget python git cmake xz-utils lsb-release sudo
 
 WORKDIR /opt
 
-RUN wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
+RUN wget https://github.com/emscripten-core/emsdk/archive/2.0.10.tar.gz emsdk-portable
 RUN tar zxf emsdk-portable.tar.gz
 
 WORKDIR /opt/emsdk-portable
